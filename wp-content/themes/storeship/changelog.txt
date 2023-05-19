@@ -1,0 +1,63 @@
+### 3.0.1 - Feb 28 2023
+* Update - Product type issue solved
+* Update - WordPress 6 compatibility
+* Fixed some design glitch
+
+### 3.0.0 - July 14 2022 =
+* Update - New theme dashboard with essential links
+* Update - WordPress 6 compatibility
+* Fixed some design glitch
+
+### 2.0.4 - July 12 2021 
+* Fixed: Some design glitch
+
+### 2.0.3 - July 11 2021 
+* Update: Accessibility update
+* Fixed: Some design glitch
+
+### 2.0.2 - July 07 2021 
+* New: Banner title background color
+* Fixed: Main navigation design glitch
+* Fixed: Some design glitch
+
+### 2.0.1 - Feb 15 2021 
+* New: Customizer - Banner Background Image Option
+* Fixed: Some design glitch
+
+### 2.0.0 - Jan 29 2021 
+* New: Customizer - Banner Advertisement Section
+* New: Customizer - Show Featured Products Only Toggle on Featured Products Section
+* New: Customizer - Top Header Options with Toggle
+* New: Customizer - Show Store Address and Contacts Toggle on Top Header Options
+* New: Customizer - Show Social Menu Toggle on Top Header Options
+* New: Customizer - Show Product Category Toggle on Product Loop
+* New: Widget Area - Frontpage Content Section
+* New: Widget - Product List
+* New: Widget - Product Grid
+* New: Widget - Product Carousel
+* New: Widget - Social Menu
+* New: Widget - Author Info Box
+* Fixed: Some design glitch
+
+### 1.0.6 - Jan 18 2021 
+* Fixed: Checkout page payment selection
+* Fixed: Some design glitch
+
+### 1.1.5 - Jan 06 2021 
+* Fixes - Loading issues for Firefox.
+
+### 1.0.4 - Dec 09 2020 
+* New - Compatibilty check with 5.6.
+* Fixes - Bootstrap issues for jQuery.
+
+### 1.0.3 - Dec 07 2020 
+* Updated according to theme review feedbacks
+
+### 1.0.2 - Nov 23 2020 
+* Fixed some design glitches
+
+### 1.0.1 - Nov 22 2020 
+* Fixed some design glitches
+
+### 1.0.0 - Nov 11 2020 
+* Initial release

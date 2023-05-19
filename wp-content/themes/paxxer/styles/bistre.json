@@ -1,0 +1,121 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "Bistre",
+	"settings": {
+		"appearanceTools": true,
+		"color": {
+			"duotone": [
+				{
+					"colors": [ "#000000", "#ffffff" ],
+					"slug": "foreground-and-background",
+					"name": "Foreground and background"
+				},
+				{
+					"colors": [ "#000000", "#50394c" ],
+					"slug": "foreground-and-secondary",
+					"name": "Foreground and secondary"
+				},
+				{
+					"colors": [ "#000000", "#ac1b00" ],
+					"slug": "foreground-and-tertiary",
+					"name": "Foreground and tertiary"
+				},
+				{
+					"colors": [ "#3d2b1f", "#ffffff" ],
+					"slug": "primary-and-background",
+					"name": "Primary and background"
+				},
+				{
+					"colors": [ "#3d2b1f", "#50394c" ],
+					"slug": "primary-and-secondary",
+					"name": "Primary and secondary"
+				},
+				{
+					"colors": [ "#3d2b1f", "#ac1b00" ],
+					"slug": "primary-and-tertiary",
+					"name": "Primary and tertiary"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "vertical-secondary-to-tertiary",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%)",
+					"name": "Vertical secondary to tertiary"
+				},
+				{
+					"slug": "vertical-secondary-to-background",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--background) 100%)",
+					"name": "Vertical secondary to background"
+				},
+				{
+					"slug": "vertical-tertiary-to-background",
+					"gradient": "linear-gradient(to bottom,var(--wp--preset--color--tertiary) 0%,var(--wp--preset--color--background) 100%)",
+					"name": "Vertical tertiary to background"
+				},
+				{
+					"slug": "diagonal-primary-to-foreground",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--primary) 0%,var(--wp--preset--color--foreground) 100%)",
+					"name": "Diagonal primary to foreground"
+				},
+				{
+					"slug": "diagonal-secondary-to-background",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--secondary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Diagonal secondary to background"
+				},
+				{
+					"slug": "diagonal-background-to-secondary",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--secondary) 50%)",
+					"name": "Diagonal background to secondary"
+				},
+				{
+					"slug": "diagonal-tertiary-to-background",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--tertiary) 50%,var(--wp--preset--color--background) 50%)",
+					"name": "Diagonal tertiary to background"
+				},
+				{
+					"slug": "diagonal-background-to-tertiary",
+					"gradient": "linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%)",
+					"name": "Diagonal background to tertiary"
+				}
+			],
+			"palette": [
+				{
+					"slug": "foreground",
+					"color": "#000000",
+					"name": "Foreground"
+				},
+				{
+					"slug": "background",
+					"color": "#ffffff",
+					"name": "Background"
+				},
+				{
+					"slug": "primary",
+					"color": "#3d2b1f",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#50394c",
+					"name": "Secondary"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#ac1b00",
+					"name": "Tertiary"
+				},
+				{
+					"slug": "border-color",
+					"color": "#e5e5e5",
+					"name": "Space Grey"
+				},
+				{
+					"slug": "footer-column",
+					"color": "#3d3d3d",
+					"name": "Footer Column Background"
+				}
+			]
+		}
+	}
+}

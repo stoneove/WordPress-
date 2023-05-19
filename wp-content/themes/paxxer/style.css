@@ -1,0 +1,391 @@
+/*
+Theme Name: Paxxer
+Theme URI: https://themecanary.com/themes/paxxer
+Author: Theme Canary
+Author URI: https://themecanary.com
+Description: Paxxer is a feature-rich Full Site Editing WordPress theme and also Elementor Compatible WordPress theme to create SEO-friendly websites. Paxxer is speed optimized, translation ready, and mobile-friendly.  You can fully customize your site with the BLock and Elementor. Check the demo at https://demo.themecanary.com/paxxer/ and documentation at https://themecanary.com/documentation/paxxer/
+Version: 1.0.2
+Requires at least: 6.0
+Tested up to: 6.2
+Requires PHP: 7.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: threaded-comments, right-sidebar, left-sidebar, one-column, two-columns, three-columns, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, theme-options, post-formats, footer-widgets, sticky-post, translation-ready, education, blog,full-site-editing
+Text Domain: paxxer
+*/
+
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ */
+
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Text and navigation link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+a:active, a:hover {
+    text-decoration:none;
+}
+
+a:focus {
+    text-decoration: underline;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:hover {
+    text-decoration: none;
+}
+
+.wp-block-navigation .wp-block-navigation-item a:focus {
+    text-decoration: underline;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item {
+    border-bottom: 1px solid #ccc;
+}
+
+/*
+ * Search and File Block button styles.
+ * Necessary until the following issues are resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/36444
+ * https://github.com/WordPress/gutenberg/issues/27760
+ */
+
+.wp-block-search__button,
+.wp-block-file .wp-block-file__button {
+    background-color: var(--wp--preset--color--primary);
+    border-radius: 0;
+    border: none;
+    color: var(--wp--preset--color--background);
+    font-size: var(--wp--preset--font-size--medium);
+    padding: calc(.667em + 2px) calc(1.333em + 2px);
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+    opacity: 0.90;
+}
+
+/* Blocks inside columns don't have negative margins. */
+.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
+.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
+/* We also want to avoid stacking negative margins. */
+.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
+.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: inherit;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+
+.wp-block-navigation__responsive-container.is-menu-open {
+    padding-top: var(--wp--custom--spacing--outer);
+    padding-bottom: var(--wp--custom--spacing--large);
+    padding-right: var(--wp--custom--spacing--outer);
+    padding-left: var(--wp--custom--spacing--outer);
+}
+
+.block-top-bar{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: var(--wp--custom--spacing--outer);
+    padding-right: var(--wp--custom--spacing--outer);
+}
+
+.block-nav {
+    padding: 0 3rem;
+}
+
+.wp-block-image img {
+    vertical-align: middle;
+}
+
+.banner-title,  .wp-block-columns {
+    margin-bottom: 0;
+
+}
+
+.wp-block-column.column-right{
+     padding: 0 1.5em;
+}
+
+.is-style-wide{
+    margin-top: 0;
+}
+
+.social-icons.wp-block-navigation{
+    gap: 0.5rem;
+}
+
+.wp-block-site-info{
+    max-width: inherit;
+}
+
+.wp-block-site-logo img, .wp-block-site-logo.is-default-size img {
+    height: 60px;
+    width: 180px;
+    
+}
+
+.block-template, .page-template-fullwidth-template .is-layout-constrained {
+    margin-block-start: 0;
+}
+
+.wp-block-search__inside-wrapper {
+    margin-bottom: 15px;
+    width: 98%;
+}
+
+.wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container {
+    z-index: 999;
+}
+
+.site-main, .wp-block-primary {
+    padding: 40px;
+}
+
+.home .wp-site-blocks > * + *{
+    margin-block-start: 0rem;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid var(--wp--preset--color--border-color);
+  color: var(--wp--preset--color--foreground);
+  padding: calc(0.667em + 2px);
+  font-size: var(--wp--preset--font-size--small);
+  line-height: var(--wp--custom--typography--line-height--normal);
+  width: 100%;
+  box-sizing: border-box;
+  outline-offset: -2px;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--foreground);
+  outline: none;
+  text-decoration: underline;
+}
+
+button,
+ input[type="reset"],
+ input[type="button"],
+ input[type="submit"] {
+    background-color: var(--wp--preset--color--primary);
+    border-radius: 3px;
+    border: 0;
+    color: var(--wp--preset--color--background);
+    cursor: pointer;
+    display: block;
+    padding-top: max(0.7rem, 0.75vw);
+    padding-right: max(1.5rem, 1.85vw);
+    padding-bottom: max(0.7rem, 0.75vw);
+    padding-left: max(1.5rem, 1.85vw);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+ 
+ input[type="reset"]:hover,
+ input[type="button"]:hover,
+ input[type="submit"]:hover {
+     background-color: var(--wp--preset--color--foreground);
+}
+
+ input[type="reset"]:focus,
+ input[type="button"]:focus,
+ input[type="submit"]:focus{
+     border: 1px dotted var(--wp--preset--color--border-color);
+     text-decoration: underline;
+}
+ 
+ input[type="checkbox"],
+ input[type="radio"] {
+     padding: 0;
+     margin-right: 0.5em;
+}
+
+header .wp-block-search {
+    margin:10px 0;
+}
+p.wp-block-site-tagline {
+    margin: 0 0 10px 0;
+}
+
+.wp-block-separator.has-background:not(.is-style-dots) {
+    margin-bottom: 0;
+}
+
+/* Navigation */
+
+.wp-block-query-pagination-numbers{
+    clear: both;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+.page-numbers {
+    background-color: var(--wp--preset--color--border-color);
+    border: 1px solid var(--wp--preset--color--border-color);
+    min-width: 20px;
+    color: #444;
+    display: block;
+    line-height: 1;
+    float: left;
+    margin-right: 8px;
+    border-radius: 50%;
+    outline: 1px solid var(--wp--preset--color--border-color);
+    padding: 10px;
+}
+
+.page-numbers:last-child {
+    margin-right: 0;
+}
+
+.page-numbers.current,
+.page-numbers:hover {
+    background-color: var(--wp--preset--color--footer-column);
+    color: var(--wp--preset--color--background);
+}
+
+.wp-block-query-pagination-previous, .wp-block-query-pagination-next, .post-navigation-link-next a, .post-navigation-link-previous a {
+    background-color: var(--wp--preset--color--background);
+    box-shadow: 0 3px 3px rgb(0 0 0 / 15%);
+    padding: 10px;
+    background-color: var(--wp--preset--color--border-color);
+}
+
+.post-navigation-link-previous {
+    float: left;
+}
+
+.post-navigation-link-next {
+    float: right;
+}
+
+.entry-title, .page-title {
+    font-size: var(--wp--custom--typography--font-size--gigantic);
+}
+
+.wp-block-post, .wp-block-widget {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    clear: both;
+    padding-bottom: 30px;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid var(--wp--preset--color--border); 
+}
+table td,
+table th {
+    border: 1px solid var(--wp--preset--color--border);
+    padding: 15px; }
+
+.wp-block-preformatted {
+  background-color: var(--wp--preset--color--border-color);
+  box-sizing: border-box;
+  font-family: 'Courier Prime', monospace;
+  overflow: auto;
+  word-wrap: break-word;
+  padding: 60px; 
+}
+
+.wp-block-quote {
+  position: relative;
+  padding: 45px 15px 15px 30px;
+  border-radius: 15px;
+  background: var(--wp--preset--color--border-color);
+  border-color: var(--wp--preset--color--primary); 
+  }
+  .wp-block-quote p {
+    color: var(--wp--preset--color--foreground);
+    font-size: var(--wp--preset--font-size--medium);
+    font-style: italic;
+    margin-top: 0; 
+}
+.wp-block-quote:before {
+    color: var(--wp--preset--color--primary);
+    content: "\201C";
+    font-family: Georgia;
+    font-size: 5.25rem;
+    line-height: 0;
+    height: auto;
+    display: block; 
+}
+.wp-block-quote.is-large:not(.is-style-plain), .wp-block-quote.is-style-large:not(.is-style-plain) {
+    padding: 80px 50px 50px; 
+}
+
+/* All Mobile Screen ( smaller than 1440px )
+ */
+
+@media only screen and (max-width: 1440px) {
+    h2.pricing-block-heading {
+        padding-left: 40px;
+    }
+
+}
+
+/* All Mobile Screen ( smaller than 768px )
+ */
+@media only screen and (max-width: 768px) {
+    .is-default-size.alignleft.wp-block-site-logo, .wp-block-site-title, .wp-block-site-tagline, .wp-block-site-logo {
+        text-align: center;
+        float: inherit;
+    }
+
+    ul.pricing-block-content {
+        text-align: center;
+    }
+
+    ul.pricing-block-content li {
+        list-style: none;
+    }
+
+}
